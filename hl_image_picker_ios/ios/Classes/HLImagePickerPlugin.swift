@@ -204,6 +204,7 @@ public class HLImagePickerPlugin: NSObject, FlutterPlugin, TLPhotosPickerViewCon
     private func openPicker() {
         let picker = TLPhotosPickerViewController()
         picker.delegate = self
+        configure.supportedInterfaceOrientations = .landscape
         picker.configure = configure
         picker.selectedAssets = self.selectedAssets
         DispatchQueue.main.async {
